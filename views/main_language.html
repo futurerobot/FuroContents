@@ -1,0 +1,12 @@
+		<div class="container">
+			<div style="height:5px"></div>
+			<div style="height:200px;text-align:center"><a href="" onfocus="blur()" data-toggle="modal" data-target="#myModal0"><img src="Images/btn_admin.png" /></a></div>
+			<div style="text-align:center"><img id="ImgLang" src="Images/language_ko.png" usemap="#LangMap" /></div>
+			<div style="height:35px"></div>
+			<map name="LangMap">
+				<area shape="rect" href="javascript:" coords="0,0,250,83" onclick="ChangeLanguage('ko-kr');imgLang = document.getElementById('ImgLang');imgLang.src='Images/language_ko.png';" >
+				<area shape="rect" href="javascript:" coords="250,0,500,83" onclick="ChangeLanguage('en-us');imgLang = document.getElementById('ImgLang');imgLang.src='Images/language_en.png';" >
+				<area shape="rect" href="javascript:" coords="500,0,750,83" onclick="ChangeLanguage('zh-cn');imgLang = document.getElementById('ImgLang');imgLang.src='Images/language_ch.png';" >
+				<area shape="rect" href="javascript:" coords="750,0,997,83" onclick="ChangeLanguage('ja-jp');imgLang = document.getElementById('ImgLang');imgLang.src='Images/language_jp.png';" >
+			</map>
+		</div>

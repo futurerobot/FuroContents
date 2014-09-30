@@ -1,0 +1,103 @@
+		<!-- Modal -->
+		<div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width:1000px">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Robot Test</h4>
+			  </div>
+			  <div class="modal-body">
+				<div style="margin:40px 0px 0px 40px;">
+					<h1>Furo-S6 BaseCommand Samples &nbsp; &nbsp; &nbsp;<span style="font-size:12px;">Ver1.0.0</span></h1>
+
+					<div>
+						<ul id="messages">
+						</ul>
+					</div>
+
+					<!-- Language Change, Language List : en-us, zh-cn -->
+					TTS <br/>
+					<input type="button" value="ChageLanguage('en-us')" onclick="ChangeLanguage('en-us');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('hello, my name is furo.');" class="btn btn-default"/>
+					&nbsp; &nbsp; &nbsp;
+					<input type="button" value="ChageLanguage('ko-kr')" onclick="ChangeLanguage('ko-kr');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('안녕하세요.');" class="btn btn-default"/><br/>
+
+					<input type="button" value="ChageLanguage('ja-jp')" onclick="ChangeLanguage('ja-jp');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('こんにちは。');" class="btn btn-default"/>
+					&nbsp; &nbsp; &nbsp;
+					<input type="button" value="ChageLanguage('zh-cn')" onclick="ChangeLanguage('zh-cn');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('你好。?');" class="btn btn-default"/>
+					&nbsp; &nbsp; &nbsp;
+					<input type="button" value="StopSpeech" onclick="StopSpeech();" class="btn btn-primary"/>
+
+					<br/><br/>
+					Voice Recognition <br/>
+					<input type="button" value="ON" onclick="SetVoiceRecognition('true');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="OFF" onclick="SetVoiceRecognition('false');" class="btn btn-default"/>
+
+					<br/><br/>
+					Human Follow <br/>
+					<input type="button" value="ON" onclick="StartHumanFollowing('true');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="OFF" onclick="StartHumanFollowing('false');" class="btn btn-default"/>
+
+					<br/><br/>
+					OnUserApproached Result<br/>
+					<input type="text" id="OnUserText" value="" onclick="" class="form-control" style="width:400px" />
+
+					<br/><br/>
+					Face Tracking<br/>
+					<input type="button" value="ON" onclick="StartFaceTracking('true');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="OFF" onclick="StartFaceTracking('false');" class="btn btn-default"/>
+
+					<br/><br/>
+					Character Show/Hide<br/>
+					<input type="button" value="ShowControl" onclick="ShowControl('character');" class="btn btn-primary"/>
+					<input type="button" value="HideControl" onclick="HideControl('character');" class="btn btn-default"/>
+
+					<br/><br/>
+					Head Pitch/Yaw/Roll <br/>
+					<input type="button" value="Pitch Up" onclick="SetHeadPitch(-15,50);" class="btn btn-primary"/>
+					<input type="button" value="Pitch Init" onclick="SetHeadPitch(0,50);" class="btn btn-default"/>
+					<input type="button" value="Pitch Down" onclick="SetHeadPitch(20,50);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<input type="button" value="Yaw Right" onclick="SetHeadYaw(25,50);" class="btn btn-primary"/>
+					<input type="button" value="Yaw Init" onclick="SetHeadYaw(0,50);" class="btn btn-default"/>
+					<input type="button" value="Yaw Left" onclick="SetHeadYaw(-25,50);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<input type="button" value="Roll Right" onclick="SetHeadRoll(15,50);" class="btn btn-primary"/>
+					<input type="button" value="Roll Init" onclick="SetHeadRoll(0,50);" class="btn btn-default"/>
+					<input type="button" value="Roll Left" onclick="SetHeadRoll(-15,50);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<br/><img src="Check/Images/control_minmax2.png" style="width:50%; margin-top:4px;"/>
+
+					<br/><br/>
+					Waist Pitch <br/>
+					<input type="button" value="Pitch Up" onclick="SetWaistPitch(5, 200);" class="btn btn-primary"/>
+					<input type="button" value="Pitch Init" onclick="SetWaistPitch(0, 200);" class="btn btn-default"/>
+					<input type="button" value="Pitch Down" onclick="SetWaistPitch(-25, 200);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<br/><br/>
+					Init Pose <br/>
+					<input type="button" value="Init Pose" onclick="InitPose();" class="btn btn-primary"/>
+
+					<br/><br/>
+					Mobile <br/>
+					<input type="button" value="Forward" onclick="DriveWheel(0.1,0);" class="btn btn-primary"/>
+					<input type="button" value="Left" onclick="DriveWheel(0,15);" class="btn btn-default"/>
+					<input type="button" value="Stop" onclick="StopWheel();" class="btn btn-primary"/>
+					<input type="button" value="Right" onclick="DriveWheel(0,-15);" class="btn btn-default"/> 
+					<input type="button" value="Backward" onclick="DriveWheel(-0.1,0);" class="btn btn-primary"/>
+
+					<br/><br/>
+					Program Close <br/>
+					<input type="button" value="Close Program" onclick="CloseProgram();" class="btn btn-primary"/>
+					<br/><br/>
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->

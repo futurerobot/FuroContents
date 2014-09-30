@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html" charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+		<title><%= pageTitle %></title>
+
+		<style type="text/css">
+		body {
+			margin:0;
+			padding:0;
+			padding-top:50px;
+			background-image:url('Images/furo_bg_green.png');
+		}
+		#footer {
+		  height: 60px;
+		  background-color: #f5f5f5;
+		}
+		.container .credit {
+		  margin: 20px 0;
+		  text-align: center;
+		}
+		</style>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="socket.io/socket.io.js"></script>
+        <script src="Scripts/jquery-2.1.1.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+        <script src="Scripts/BaseCommand.js"></script>
+
+		<script language="JavaScript" type="text/javascript">
+		function JSMain()
+		{
+			//location.href = 'temp/Setting.htm';
+		}
+		</script>
+	</head>
+
+	<body onload="JSMain()">
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Project name</a>
+			</div>
+			<div class="collapse navbar-collapse">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</div>
+
+		<div class="container">
+			<div style="height:5px"></div>
+			<div style="height:200px;text-align:center"><a href="" onfocus="blur()" data-toggle="modal" data-target="#myModal0"><img src="Images/btn_admin.png" /></a></div>
+			<div style="text-align:center"><img src="Images/language_ko.png" /></div>
+			<div style="height:35px"></div>
+		</div>
+
+		<!-- Carousel
+		================================================== -->
+		<div id="myCarousel" class="carousel slide" data-interval="false">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+		  </ol>
+		  <div class="carousel-inner container">
+			<div class="item active">
+				<table style="margin:auto">
+					<tr><td colspan="4" style="height:60px"></td></tr>
+					<tr>
+						<td style="padding:20px"><a href="" onfocus="blur()" data-toggle="modal" data-target="#myModal1"><img src="Images/btn_ifa.png" /></a></td>
+						<td style="padding:20px"><img src="Images/icon_13.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_12.png" /></td>
+						<td style="padding:20px"><img src="Images/menu_07.png" /></td>
+					</tr>
+					<tr><td colspan="4" style="height:40px"></td></tr>
+					<tr>
+						<td style="padding:20px"><a href="" onfocus="blur()" data-toggle="modal" data-target="#myModal5"><img src="Images/icon_15.png" /></a></td>
+						<td style="padding:20px"><img src="Images/icon_11.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_10.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_09.png" /></td>
+					</tr>
+					<tr><td colspan="4" style="height:95px"></td></tr>
+				</table>
+			  <div class="container">
+				<div class="carousel-caption">
+				  <!--<h1>Example headline.</h1>-->
+				</div>
+			  </div>
+			</div>
+			<div class="item">
+				<table style="margin:auto">
+					<tr><td colspan="4" style="height:60px"></td></tr>
+					<tr>
+						<td style="padding:20px"><img src="Images/btn_ifa.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_13.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_12.png" /></td>
+						<td style="padding:20px"><img src="Images/menu_07.png" /></td>
+					</tr>
+					<tr><td colspan="4" style="height:40px"></td></tr>
+					<tr>
+						<td style="padding:20px"><img src="Images/icon_15.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_11.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_10.png" /></td>
+						<td style="padding:20px"><img src="Images/icon_09.png" /></td>
+					</tr>
+					<tr><td colspan="4" style="height:95px"></td></tr>
+				</table>
+			  <div class="container">
+				<div class="carousel-caption">
+				  <!--<h1>Another example headline.</h1>-->
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev" onfocus="blur()"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next" onfocus="blur()"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div><!-- /.carousel -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width:1000px">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Robot Test</h4>
+			  </div>
+			  <div class="modal-body">
+				<div style="margin:40px 0px 0px 40px;">
+					<h1>Furo-S6 BaseCommand Samples &nbsp; &nbsp; &nbsp;<span style="font-size:12px;">Ver1.0.0</span></h1>
+
+					<div>
+						<ul id="messages">
+						</ul>
+					</div>
+
+					<!-- Language Change, Language List : en-us, zh-cn -->
+					TTS <br/>
+					<input type="button" value="ChageLanguage('en-us')" onclick="ChangeLanguage('en-us');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('hello, my name is furo.');" class="btn btn-default"/>
+					&nbsp; &nbsp; &nbsp;
+					<input type="button" value="ChageLanguage('ko-kr')" onclick="ChangeLanguage('ko-kr');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('안녕하세요.');" class="btn btn-default"/><br/>
+
+					<input type="button" value="ChageLanguage('ja-jp')" onclick="ChangeLanguage('ja-jp');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('こんにちは。');" class="btn btn-default"/>
+					&nbsp; &nbsp; &nbsp;
+					<input type="button" value="ChageLanguage('zh-cn')" onclick="ChangeLanguage('zh-cn');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="PlaySpeech" onclick="PlaySpeech('你好。?');" class="btn btn-default"/>
+					&nbsp; &nbsp; &nbsp;
+					<input type="button" value="StopSpeech" onclick="StopSpeech();" class="btn btn-primary"/>
+
+					<br/><br/>
+					Voice Recognition <br/>
+					<input type="button" value="ON" onclick="SetVoiceRecognition('true');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="OFF" onclick="SetVoiceRecognition('false');" class="btn btn-default"/>
+
+					<br/><br/>
+					Human Follow <br/>
+					<input type="button" value="ON" onclick="StartHumanFollowing('true');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="OFF" onclick="StartHumanFollowing('false');" class="btn btn-default"/>
+
+					<br/><br/>
+					OnUserApproached Result<br/>
+					<input type="text" id="OnUserText" value="" onclick="" class="TS"/>
+
+					<br/><br/>
+					Face Tracking<br/>
+					<input type="button" value="ON" onclick="StartFaceTracking('true');" class="btn btn-primary"/>&nbsp;
+					<input type="button" value="OFF" onclick="StartFaceTracking('false');" class="btn btn-default"/>
+
+					<br/><br/>
+					Character Show/Hide<br/>
+					<input type="button" value="ShowControl" onclick="ShowControl('character');" class="btn btn-primary"/>
+					<input type="button" value="HideControl" onclick="HideControl('character');" class="btn btn-default"/>
+
+					<br/><br/>
+					Head Pitch/Yaw/Roll <br/>
+					<input type="button" value="Pitch Up" onclick="SetHeadPitch(-15,50);" class="btn btn-primary"/>
+					<input type="button" value="Pitch Init" onclick="SetHeadPitch(0,50);" class="btn btn-default"/>
+					<input type="button" value="Pitch Down" onclick="SetHeadPitch(20,50);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<input type="button" value="Yaw Right" onclick="SetHeadYaw(25,50);" class="btn btn-primary"/>
+					<input type="button" value="Yaw Init" onclick="SetHeadYaw(0,50);" class="btn btn-default"/>
+					<input type="button" value="Yaw Left" onclick="SetHeadYaw(-25,50);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<input type="button" value="Roll Right" onclick="SetHeadRoll(15,50);" class="btn btn-primary"/>
+					<input type="button" value="Roll Init" onclick="SetHeadRoll(0,50);" class="btn btn-default"/>
+					<input type="button" value="Roll Left" onclick="SetHeadRoll(-15,50);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<br/><img src="Check/Images/control_minmax2.png" style="width:50%; margin-top:4px;"/>
+
+					<br/><br/>
+					Waist Pitch <br/>
+					<input type="button" value="Pitch Up" onclick="SetWaistPitch(5, 200);" class="btn btn-primary"/>
+					<input type="button" value="Pitch Init" onclick="SetWaistPitch(0, 200);" class="btn btn-default"/>
+					<input type="button" value="Pitch Down" onclick="SetWaistPitch(-25, 200);" class="btn btn-primary"/>&nbsp; &nbsp;
+
+					<br/><br/>
+					Init Pose <br/>
+					<input type="button" value="Init Pose" onclick="InitPose();" class="btn btn-primary"/>
+
+					<br/><br/>
+					Mobile <br/>
+					<input type="button" value="Forward" onclick="DriveWheel(0.1,0);" class="btn btn-primary"/>
+					<input type="button" value="Left" onclick="DriveWheel(0,15);" class="btn btn-default"/>
+					<input type="button" value="Stop" onclick="StopWheel();" class="btn btn-primary"/>
+					<input type="button" value="Right" onclick="DriveWheel(0,-15);" class="btn btn-default"/> 
+					<input type="button" value="Backward" onclick="DriveWheel(-0.1,0);" class="btn btn-primary"/>
+
+					<br/><br/>
+					Program Close <br/>
+					<input type="button" value="Close Program" onclick="CloseProgram();" class="btn btn-primary"/>
+					<br/><br/>
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width:1000px">
+			<div class="modal-content">
+			  <div class="modal-header" style="height:240px">
+			    <img src="IFA2014/Images/title_ifa_01.png" style="width:948px" />
+				<div style="position:relative;left:770px;top:-170px"><a href="" onfocus="blur()" data-dismiss="modal"><img src="Images/btn_home.png" /></a></div>
+				<!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Introduction of IFA</h4>-->
+			  </div>
+			  <div class="modal-body">
+				<table style="margin:auto;width:920px">
+					<tr><td colspan="3" style="height:20px"></td></tr>
+					<tr>
+						<td style="text-align:center;padding:10px"><img src="IFA2014/Images/ifa_icon_01.png" /></td>
+						<td style="text-align:center;padding:10px"><img src="IFA2014/Images/ifa_icon_02.png" /></td>
+						<td style="text-align:center;padding:10px"><img src="IFA2014/Images/ifa_icon_03.png" /></td>
+					</tr>
+					<tr><td colspan="3" style="height:20px"></td></tr>
+					<tr>
+						<td style="text-align:center;padding:10px"><img src="IFA2014/Images/ifa_icon_04.png" /></td>
+						<td style="text-align:center;padding:10px"><img src="IFA2014/Images/ifa_icon_05.png" /></td>
+						<td style="text-align:center;padding:10px"><img src="IFA2014/Images/ifa_icon_06.png" /></td>
+					</tr>
+				</table>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" style="width:1000px">
+			<div class="modal-content">
+			  <div class="modal-header" style="height:110px;text-align:center;">
+			    <img src="RMS/Images/robot_title_06_03.png" />
+				<div style="position:relative;left:400px;top:-80px"><a href="" onfocus="blur()" data-dismiss="modal"><img src="Images/btn_home.png" /></a></div>
+				<!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Introduction of IFA</h4>-->
+			  </div>
+			  <div class="modal-body">
+				<table style="margin:auto;width:920px">
+					<tr><td style="height:20px"></td></tr>
+					<tr>
+						<td style="text-align:center;padding:10px"><img src="RMS/Images/rms_back.png" style="width:920px" /></td>
+					</tr>
+				</table>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<div class="container">
+			<div style="margin:auto;background-image:url('Images/movie_bg.png');width:1080px;"><img src="Images/movie_001-1.png" /></div>
+		</div>
+
+		<div class="container">
+			<div style="text-align:center">
+				<video id="MediaPlayer" width="1080" height="720" autoplay="autoplay" loop>
+					<source src="Movies/main.mp4" type="video/mp4" >
+				</video>
+			</div>
+		</div><!-- /.container -->
+
+		<div id="footer">
+		  <div class="container">
+			<p class="text-muted credit">Created by <a href="http://www.futurerobot.com">FutureRobot</a></p>
+		  </div>
+		</div>
+
+	</body>
+</html>
